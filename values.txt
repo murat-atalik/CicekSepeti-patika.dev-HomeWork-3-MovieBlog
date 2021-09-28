@@ -5,7 +5,7 @@
     "name": "The Fellowship of the Ring",
     "director": "Peter Jackson",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=V75dMMIW2B4",
+    "teaser": "https://www.youtube.com/embed/V75dMMIW2B4",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg",
     "id": "1"
   },
@@ -13,7 +13,7 @@
     "name": "The Two Towers",
     "director": "Peter Jackson",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=LbfMDwc4azU",
+    "teaser": "https://www.youtube.com/embed/LbfMDwc4azU",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d0/Lord_of_the_Rings_-_The_Two_Towers_%282002%29.jpg",
     "id": "2"
   },
@@ -21,7 +21,7 @@
     "name": "The Return of the King",
     "director": "Peter Jackson",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=y2rYRu8UW8M",
+    "teaser": "https://www.youtube.com/embed/y2rYRu8UW8M",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/be/The_Lord_of_the_Rings_-_The_Return_of_the_King_%282003%29.jpg",
     "id": "3"
   },
@@ -29,7 +29,7 @@
     "name": "The Hobbit: An Unexpected Journey",
     "director": "Peter Jackson",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=9PSXjr1gbjc",
+    "teaser": "https://www.youtube.com/embed/9PSXjr1gbjc",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/b/b3/The_Hobbit-_An_Unexpected_Journey.jpeg",
     "id": "4"
   },
@@ -37,7 +37,7 @@
     "name": "The Hobbit: The Desolation of Smaug",
     "director": "Peter Jackson",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=OPVWy1tFXuc",
+    "teaser": "https://www.youtube.com/embed/OPVWy1tFXuc",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4f/The_Hobbit_-_The_Desolation_of_Smaug_theatrical_poster.jpg",
     "id": "5"
   },
@@ -45,7 +45,7 @@
     "name": "The Hobbit: The Battle of the Five Armies",
     "director": "Peter Jackson",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=iVAgTiBrrDA",
+    "teaser": "https://www.youtube.com/embed/iVAgTiBrrDA",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Hobbit_-_The_Battle_of_the_Five_Armies.jpg",
     "id": "6"
   },
@@ -53,7 +53,7 @@
     "name": "The Matrix Resurrections",
     "director": "Lana Wachowski",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=9ix7TUGVYIo",
+    "teaser": "https://www.youtube.com/embed/9ix7TUGVYIo",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/50/The_Matrix_Resurrections.jpg/220px-The_Matrix_Resurrections.jpg",
     "id": "7"
   },
@@ -61,7 +61,7 @@
     "name": "Bohemian Rhapsody",
     "director": "Bryan Singer",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=mP0VHJYFOAU",
+    "teaser": "https://www.youtube.com/embed/mP0VHJYFOAU",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/Bohemian_Rhapsody_poster.png/220px-Bohemian_Rhapsody_poster.png",
     "id": "8"
   },
@@ -69,7 +69,7 @@
     "name": "Dead Men Tell No Tales",
     "director": "Joachim Rønning",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=Hgeu5rhoxxY",
+    "teaser": "https://www.youtube.com/embed/Hgeu5rhoxxY",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/Pirates_of_the_Caribbean%2C_Dead_Men_Tell_No_Tales.jpg",
     "id": "9"
   },
@@ -77,7 +77,7 @@
     "name": "The Witcher: Nightmare of the Wolf",
     "director": "Kwang Il Han",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=J365hQpaWRw",
+    "teaser": "https://www.youtube.com/embed/J365hQpaWRw",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/The_Witcher_Nightmare_of_the_Wolf.jpg/220px-The_Witcher_Nightmare_of_the_Wolf.jpg",
     "id": "10"
   },
@@ -85,7 +85,7 @@
     "name": "Who Am I",
     "director": "Baran bo Odar",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=ynW6Ys3LLAQ",
+    "teaser": "https://www.youtube.com/embed/ynW6Ys3LLAQ",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/Who_am_I_movie_poster.jpg/220px-Who_am_I_movie_poster.jpg",
     "id": "11"
   },
@@ -93,7 +93,7 @@
     "name": "V for Vendetta",
     "director": "James McTeigue",
     "star": 3,
-    "teaser": "https://www.youtube.com/watch?v=lSA7mAHolAw",
+    "teaser": "https://www.youtube.com/embed/lSA7mAHolAw",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/9/9f/Vforvendettamov.jpg",
     "id": "12"
   },
@@ -101,7 +101,7 @@
     "name": "Justice League (2017)",
     "director": "Unknown",
     "star": 1,
-    "teaser": "https://www.youtube.com/watch?v=3cxixDgHUYw",
+    "teaser": "https://www.youtube.com/embed/3cxixDgHUYw",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/6/6b/Justice_League_%28film%29_poster.jpg",
     "id": "13"
   },
@@ -109,7 +109,7 @@
     "name": "Free Guy",
     "director": "Shawn Levy",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=JORN2hkXLyM",
+    "teaser": "https://www.youtube.com/embed/JORN2hkXLyM",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/Free_Guy_2021_Poster.jpg/220px-Free_Guy_2021_Poster.jpg",
     "id": "14"
   },
@@ -117,7 +117,7 @@
     "name": "Zack Snyder's Justice League",
     "director": "Zack Snyder",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=vM-Bja2Gy04",
+    "teaser": "https://www.youtube.com/embed/vM-Bja2Gy04",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Zack_Snyder%27s_Justice_League.png/220px-Zack_Snyder%27s_Justice_League.png",
     "id": "15"
   },
@@ -125,7 +125,7 @@
     "name": "Logan",
     "director": "James Mangold",
     "star": 3,
-    "teaser": "https://www.youtube.com/watch?v=Div0iP65aZo",
+    "teaser": "https://www.youtube.com/embed/Div0iP65aZo",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/37/Logan_2017_poster.jpg",
     "id": "16"
   },
@@ -133,7 +133,7 @@
     "name": "Ford v Ferrari",
     "director": "James Mangold",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=zyYgDtY2AMY",
+    "teaser": "https://www.youtube.com/embed/zyYgDtY2AMY",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Ford_v._Ferrari_%282019_film_poster%29.png/220px-Ford_v._Ferrari_%282019_film_poster%29.png",
     "id": "17"
   },
@@ -141,7 +141,7 @@
     "name": "The Fast and the Furious: Tokyo Drift",
     "director": "Justin Lin",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=iuJDhFRDx9M",
+    "teaser": "https://www.youtube.com/embed/iuJDhFRDx9M",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4f/Poster_-_Fast_and_Furious_Tokyo_Drift.jpg",
     "id": "18"
   },
@@ -149,7 +149,7 @@
     "name": "8 Mile",
     "director": "Curtis Hanson",
     "star": 4,
-    "teaser": "https://www.youtube.com/watch?v=axGVrfwm9L4",
+    "teaser": "https://www.youtube.com/embed/axGVrfwm9L4",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/Eight_mile_ver2.jpg/220px-Eight_mile_ver2.jpg",
     "id": "19"
   },
@@ -157,7 +157,7 @@
     "name": "The Dark Knight",
     "director": "Christopher Nolan",
     "star": 5,
-    "teaser": "https://www.youtube.com/watch?v=EXeTwQWrcwY",
+    "teaser": "https://www.youtube.com/embed/EXeTwQWrcwY",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg",
     "id": "20"
   }

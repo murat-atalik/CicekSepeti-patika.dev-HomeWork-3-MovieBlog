@@ -12,3 +12,16 @@
     transform: rotate(360deg);
   }
 }
+.alert {
+  background-color: #fed34d;
+  width: 30%;
+  position: fixed;
+  padding: 1rem;
+  border-radius: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: center;
+  color: rgb(18, 13, 27);
+  font-size: 24px;
+  font-weight: 400;
+}

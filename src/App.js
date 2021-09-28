@@ -11,8 +11,17 @@ class App extends Component {
       data: [],
       filteredData: [],
       searchValue: '',
+      alert: false,
+      alertInfo: '',
     };
   }
+  handleAlert = (process) => {
+    this.setState({ alert: true, alertInfo: process });
+    setTimeout(() => {
+      this.setState({ alert: false, alertInfo: '' });
+    }, 3000);
+  };
+
   // filtering data with search value. It comes header searchbar
   handleSearch = (searchValue) => {
     const filteredData = this.state.data.filter((value) =>
@@ -27,9 +36,8 @@ class App extends Component {
         value.id !== id &&
         value.name.toLowerCase().includes(this.state.searchValue)
     );
-
-    console.log(data);
     this.setState({ data, filteredData });
+    this.handleAlert('MOVIE DELETED');
   };
   componentDidMount() {
     fetch('https://808d78e8-427b-4170-8a00-267b532e31c1.mock.pstmn.io/movies')
@@ -44,7 +52,14 @@ class App extends Component {
       <>
         <Header filterData={this.handleSearch} />
         <div className="App">
-          <Card data={this.state.filteredData} deleteCard={this.handleDelete} />
+          <Card
+            data={this.state.filteredData}
+            deleteCard={this.handleDelete}
+            alert={this.handleAlert}
+          />
+          {this.state.alert && (
+            <div className="alert">{this.state.alertInfo}</div>
+          )}
         </div>
         <Footer />
       </>
