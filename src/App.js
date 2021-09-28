@@ -15,6 +15,7 @@ class App extends Component {
       alertInfo: '',
     };
   }
+  // pozisyonu sabit olan basit bir divi alert olarak kullanmama olanak sagliyor
   handleAlert = (process) => {
     this.setState({ alert: true, alertInfo: process });
     setTimeout(() => {
@@ -30,6 +31,7 @@ class App extends Component {
     this.setState({ filteredData, searchValue });
   };
   handleDelete = (id) => {
+    // id ye gore datamizdaki elemani siliyoruz ve filtremizin kaybolmamasi icin statemizideki seacrh value ile tekrardan filtreliyoruz
     const data = this.state.data.filter((value) => value.id !== id);
     const filteredData = this.state.data.filter(
       (value) =>
@@ -39,7 +41,20 @@ class App extends Component {
     this.setState({ data, filteredData });
     this.handleAlert('MOVIE DELETED');
   };
+  handleEdit = (data) => {
+    //shallow copy of items
+    const movies = [...this.state.data];
+    //finding movie index
+    const movieIndex = this.state.data.findIndex(
+      (movie) => movie.id === data.id
+    );
+    //movies in indexindeki datayi edite card uzerinden yolluyoruz ve onunla degistiryoruz
+    movies[movieIndex] = data;
+    this.setState({ data: movies });
+    this.handleAlert('MOVIE EDITED');
+  };
   componentDidMount() {
+    document.title = 'MoviesBd';
     fetch('https://808d78e8-427b-4170-8a00-267b532e31c1.mock.pstmn.io/movies')
       .then((response) => response.json())
       .then((data) => {
@@ -56,6 +71,7 @@ class App extends Component {
             data={this.state.filteredData}
             deleteCard={this.handleDelete}
             alert={this.handleAlert}
+            handleEdit={this.handleEdit}
           />
           {this.state.alert && (
             <div className="alert">{this.state.alertInfo}</div>

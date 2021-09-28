@@ -17,23 +17,32 @@ export default function Card(props) {
     const showModal = { show: true, modalData: data };
     setModalData(showModal);
   };
-
+  const handleStar = (id, star) => {
+    const moveId = responseData.findIndex((data) => data.id === id);
+    const movie = responseData[moveId];
+    movie.star = star;
+    props.handleEdit(movie);
+  };
   return (
     props.data.length > 0 && (
       <div className="card-container">
         {responseData.map((data) => (
           <div className="card" key={data.id}>
-            <button className="delete" onClick={() => handleDelete(data.id)}>
-              <AiFillDelete size="2rem" color="red" />
-            </button>
-            <button className="edit" onClick={() => handleEdit(data)}>
-              <AiFillEdit size="2rem" color="blue" />
-            </button>
-            <img className="card-image" src={data.imageUrl} alt={'album'} />
-            <h2 className="card-title">{data.name}</h2>
-            <div className="card-star">
-              <CardStar star={data.star} />
+            <div className="card-image">
+              <button className="delete" onClick={() => handleDelete(data.id)}>
+                <AiFillDelete className="delete-icon" size="2rem" color="red" />
+              </button>
+
+              <img
+                onClick={() => handleEdit(data)}
+                src={data.imageUrl}
+                alt={'album'}
+              />
+              <div className="card-star">
+                <CardStar data={data} handleStar={handleStar} />
+              </div>
             </div>
+            <h2 className="card-title">{data.name}</h2>
           </div>
         ))}
         <CardModal

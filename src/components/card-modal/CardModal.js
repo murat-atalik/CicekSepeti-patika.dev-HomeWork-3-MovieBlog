@@ -43,7 +43,7 @@ export default function CardModal(props) {
             </div>
             <div className="modal-popularity">
               <h2>Popularity:</h2>
-              <CardStar star={modalData?.star} />
+              <CardStar data={modalData} />
             </div>
           </div>
         </div>

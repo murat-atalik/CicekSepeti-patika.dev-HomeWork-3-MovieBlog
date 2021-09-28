@@ -1,16 +1,43 @@
 import React from 'react';
 import './CardStar.scss';
+import { GiStarFormation } from 'react-icons/gi';
 
 export default function CardStar(props) {
+  const handleStar = (star) => {
+    props.handleStar(props.data.id, star);
+  };
   return (
     <>
-      <div className="star-container">
-        <div className={props.star >= 1 ? 'star-filled' : 'star-empty'}></div>
-        <div className={props.star >= 2 ? 'star-filled' : 'star-empty'}></div>
-        <div className={props.star >= 3 ? 'star-filled' : 'star-empty'}></div>
-        <div className={props.star >= 4 ? 'star-filled' : 'star-empty'}></div>
-        <div className={props.star >= 5 ? 'star-filled' : 'star-empty'}></div>
-      </div>
+      <GiStarFormation
+        onClick={() => handleStar(1)}
+        className="icon"
+        size="2rem"
+        color={props.data.star >= 1 ? '#fed34d' : '#120d1b'}
+      />
+      <GiStarFormation
+        onClick={() => handleStar(2)}
+        className="icon"
+        size="2rem"
+        color={props.data.star >= 2 ? '#fed34d' : '#120d1b'}
+      />
+      <GiStarFormation
+        onClick={() => handleStar(3)}
+        className="icon"
+        size="2rem"
+        color={props.data.star >= 3 ? '#fed34d' : '#120d1b'}
+      />
+      <GiStarFormation
+        onClick={() => handleStar(4)}
+        className="icon"
+        size="2rem"
+        color={props.data.star >= 4 ? '#fed34d' : '#120d1b'}
+      />
+      <GiStarFormation
+        onClick={() => handleStar(5)}
+        className="icon"
+        size="2rem"
+        color={props.data.star >= 5 ? '#fed34d' : '#120d1b'}
+      />
     </>
   );
 }

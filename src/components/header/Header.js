@@ -12,10 +12,16 @@ class Header extends React.Component {
     // filtering card
     this.props.filterData(event.target.value);
   };
+  handleGithub = () => {
+    window.open('https://github.com/murat-atalik', '_blank');
+  };
+  handleTrainerGithub = () => {
+    window.open('https://github.com/CaglayanYanikoglu', '_blank');
+  };
   render() {
     return (
       <div className="header">
-        <div className="logo">
+        <div className="logo" onClick={this.handleTrainerGithub}>
           {/* IMDb :P */}
           <p>IMBd</p>
         </div>
@@ -34,6 +40,7 @@ class Header extends React.Component {
           <img
             src={'https://cdn-icons-png.flaticon.com/64/924/924874.png'}
             alt="avatar"
+            onClick={this.handleGithub}
           />
         </div>
       </div>
