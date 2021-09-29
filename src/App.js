@@ -15,12 +15,15 @@ class App extends Component {
       alertInfo: '',
     };
   }
-  // pozisyonu sabit olan basit bir divi alert olarak kullanmama olanak sagliyor
-  handleAlert = (process) => {
-    this.setState({ alert: true, alertInfo: process });
+  timer = () =>
     setTimeout(() => {
       this.setState({ alert: false, alertInfo: '' });
     }, 3000);
+  // pozisyonu sabit olan basit bir divi alert olarak kullanmama olanak sagliyor
+  handleAlert = (process) => {
+    clearTimeout(this.timer());
+    this.setState({ alert: true, alertInfo: process });
+    this.timer();
   };
 
   // filtering data with search value. It comes header searchbar
@@ -50,7 +53,10 @@ class App extends Component {
     );
     //movies in indexindeki datayi edite card uzerinden yolluyoruz ve onunla degistiryoruz
     movies[movieIndex] = data;
-    this.setState({ data: movies });
+    const filteredData = movies.filter((value) =>
+      value.name.toLowerCase().includes(this.state.searchValue)
+    );
+    this.setState({ data: movies, filteredData });
     this.handleAlert('MOVIE EDITED');
   };
   componentDidMount() {
@@ -61,6 +67,11 @@ class App extends Component {
         this.setState({ data, filteredData: data });
       });
   }
+  /*  
+  componentDidUpdate(prevProps, prevState, snapshot, timer) {
+    console.log('updated');
+    clearTimeout(this.timer); // clear the timeoutID
+  } */
 
   render() {
     return (

@@ -8,11 +8,10 @@
     border-radius: 5px;
     position: fixed;
     width: 80%;
-    height: 80%;
+    height: 90%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fed34d;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -20,8 +19,18 @@
   }
   .modal-body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding: 4rem;
+    .modal-info {
+      display: flex;
+      flex-direction: column;
+      margin-right: 4rem;
+      margin-left: 4rem;
+    }
+    .modal-image {
+      margin-right: 4rem;
+    }
   }
 }
 button {
@@ -36,12 +45,73 @@ button {
 .modal-popularity {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   height: 60px;
 }
 .modal-director,
-.modal-name {
+.modal-name,
+.modal-teaserurl,
+.modal-imageurl {
+  font-size: 24px;
+  font-weight: bolder;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.modal-input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #fed34d;
   height: 60px;
   font-size: 24px;
   font-weight: bolder;
+  width: 40rem;
+}
+.input-label {
+  margin-right: 1rem;
+  font-size: 24px;
+  color: #fed34d;
+  font-size: 24px;
+  font-weight: bolder;
+  width: 10rem;
+}
+.modal-button {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #fed34d;
+  position: fixed;
+  top: 90%;
+  right: 3rem;
+  &:hover {
+    background-color: green;
+    transform: scale(1.1);
+  }
+}
+
+.modal-closebtn {
+  *:hover {
+    transform: scale(1.1);
+    fill: red;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .modal-image {
+    display: none;
+  }
+  .modal-input {
+    width: 100%;
+  }
+  .modal-info {
+    width: 100%;
+  }
+  .modal-popularity {
+    flex-direction: column;
+    .popularity-star {
+      margin-top: 10px;
+    }
+  }
+  .input-label {
+    width: 100%;
+  }
 }
