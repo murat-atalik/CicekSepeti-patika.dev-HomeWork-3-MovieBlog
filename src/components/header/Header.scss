@@ -48,14 +48,19 @@
     left: 5px;
   }
 }
+.nightmode-toggle {
+  fill: #fed34d;
+}
+.nightmode-toggle :hover {
+  fill: rgba(59, 59, 59, 0.8);
+}
+
 @media screen and (max-width: 500px) {
   .avatar,
   .logo {
     display: none;
   }
   .search-bar {
-    .search-input {
-      margin: auto;
-    }
+    margin-left: 10%;
   }
 }

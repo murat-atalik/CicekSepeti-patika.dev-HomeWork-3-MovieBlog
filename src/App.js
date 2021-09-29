@@ -3,7 +3,14 @@ import React, { Component } from 'react';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Card from './components/card/Card';
-
+const themes = {
+  light: {
+    backgroundColor: '#f5f5f5',
+  },
+  night: {
+    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+  },
+};
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +20,7 @@ class App extends Component {
       searchValue: '',
       alert: false,
       alertInfo: '',
+      nightMode: true,
     };
   }
   timer = () =>
@@ -67,6 +75,12 @@ class App extends Component {
         this.setState({ data, filteredData: data });
       });
   }
+
+  //Toggle night mode
+  handleNightMode = () => {
+    this.setState({ nightMode: !this.state.nightMode });
+    /*  localStorage.setItem('theme', true); */
+  };
   /*  
   componentDidUpdate(prevProps, prevState, snapshot, timer) {
     console.log('updated');
@@ -76,8 +90,15 @@ class App extends Component {
   render() {
     return (
       <>
-        <Header filterData={this.handleSearch} />
-        <div className="App">
+        <Header
+          filterData={this.handleSearch}
+          handleNightMode={this.handleNightMode}
+          theme={this.state.nightMode}
+        />
+        <div
+          className="App"
+          style={this.state.nightMode ? themes.night : themes.light}
+        >
           <Card
             data={this.state.filteredData}
             deleteCard={this.handleDelete}
@@ -88,7 +109,8 @@ class App extends Component {
             <div className="alert">{this.state.alertInfo}</div>
           )}
         </div>
-        <Footer />
+
+        <Footer theme={this.state.nightMode} />
       </>
     );
   }

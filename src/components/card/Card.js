@@ -3,7 +3,14 @@ import './Card.scss';
 import CardStar from '../card-star/CardStar';
 import { AiFillDelete } from 'react-icons/ai';
 import CardModal from '../card-modal/CardModal';
-
+const themes = {
+  light: {
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  },
+  night: {
+    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+  },
+};
 export default function Card(props) {
   const [responseData, setResponseData] = useState([]);
   const [modalData, setModalData] = useState({});

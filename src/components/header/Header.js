@@ -1,6 +1,16 @@
 import React from 'react';
 import './Header.scss';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { BsSun, BsMoon } from 'react-icons/bs';
+
+const themes = {
+  light: {
+    backgroundColor: '#202020',
+  },
+  night: {
+    backgroundColor: '#000000',
+  },
+};
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +30,10 @@ class Header extends React.Component {
   };
   render() {
     return (
-      <div className="header">
+      <div
+        className="header"
+        style={this.props.theme ? themes.night : themes.light}
+      >
         <div className="logo" onClick={this.handleTrainerGithub}>
           {/* IMDb :P */}
           <p>IMBd</p>
@@ -42,6 +55,13 @@ class Header extends React.Component {
             alt="avatar"
             onClick={this.handleGithub}
           />
+        </div>
+        <div className="nightmode-toggle" onClick={this.props.handleNightMode}>
+          {this.props.theme ? (
+            <BsSun size="2rem" color="#fed34d" />
+          ) : (
+            <BsMoon size="2rem" color="#fed34d" />
+          )}
         </div>
       </div>
     );

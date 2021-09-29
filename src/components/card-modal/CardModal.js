@@ -3,6 +3,14 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 import ReactModal from 'react-modal';
 import CardStar from '../card-star/CardStar';
 import './CardModal.scss';
+const themes = {
+  light: {
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+  },
+  night: {
+    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+  },
+};
 
 export default function CardModal(props) {
   const [showModal, setShowModal] = useState(false);
