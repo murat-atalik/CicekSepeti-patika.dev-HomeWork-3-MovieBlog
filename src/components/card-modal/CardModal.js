@@ -4,11 +4,17 @@ import ReactModal from 'react-modal';
 import CardStar from '../card-star/CardStar';
 import './CardModal.scss';
 const themes = {
-  light: {
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
-  },
-  night: {
-    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+  modal: {
+    light: {
+      overlay: {
+        background: 'rgba(49,49,49, 0.6)',
+      },
+    },
+    night: {
+      overlay: {
+        background: 'rgba(24,24,24, 0.6)',
+      },
+    },
   },
 };
 
@@ -80,6 +86,9 @@ export default function CardModal(props) {
     <div>
       <ReactModal
         className="modal"
+        style={
+          props.theme === 'light' ? themes.modal.light : themes.modal.night
+        }
         ariaHideApp={false}
         isOpen={showModal}
         contentLabel="Minimal Modal Example"

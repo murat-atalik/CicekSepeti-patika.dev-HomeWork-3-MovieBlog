@@ -5,10 +5,10 @@ import { BsSun, BsMoon } from 'react-icons/bs';
 
 const themes = {
   light: {
-    backgroundColor: '#202020',
+    backgroundColor: '#404040',
   },
   night: {
-    backgroundColor: '#000000',
+    backgroundColor: '#000',
   },
 };
 class Header extends React.Component {
@@ -32,7 +32,7 @@ class Header extends React.Component {
     return (
       <div
         className="header"
-        style={this.props.theme ? themes.night : themes.light}
+        style={this.props.theme === 'light' ? themes.light : themes.night}
       >
         <div className="logo" onClick={this.handleTrainerGithub}>
           {/* IMDb :P */}
@@ -57,7 +57,7 @@ class Header extends React.Component {
           />
         </div>
         <div className="nightmode-toggle" onClick={this.props.handleNightMode}>
-          {this.props.theme ? (
+          {this.props.theme === 'night' ? (
             <BsSun size="2rem" color="#fed34d" />
           ) : (
             <BsMoon size="2rem" color="#fed34d" />

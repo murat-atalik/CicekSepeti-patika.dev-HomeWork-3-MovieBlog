@@ -20,7 +20,7 @@ class App extends Component {
       searchValue: '',
       alert: false,
       alertInfo: '',
-      nightMode: true,
+      nightMode: 'night',
     };
   }
   timer = () =>
@@ -74,22 +74,36 @@ class App extends Component {
       .then((data) => {
         this.setState({ data, filteredData: data });
       });
+
+    /* local storage da nigthmode varsa ve light ise stateimizi light yapiyor eger yoksa veya night ise once state setliyor ardindan kendini set ediyor bunun sirasinin bir onemi yok */
+    if (localStorage.getItem('nightMode') === 'light') {
+      this.setState({ nightMode: 'light' });
+    } else {
+      this.setState({ nightMode: 'night' });
+      localStorage.setItem('nightMode', 'night');
+    }
+    /* //localstorage ida bulunan tum keyleri siler
+    localStorage.clear(); */
   }
 
   //Toggle night mode
   handleNightMode = () => {
-    this.setState({ nightMode: !this.state.nightMode });
+    if (localStorage.getItem('nightMode') === 'light') {
+      localStorage.setItem('nightMode', 'night');
+      this.setState({ nightMode: 'night' });
+    } else {
+      localStorage.setItem('nightMode', 'light');
+      this.setState({ nightMode: 'light' });
+    }
+
     /*  localStorage.setItem('theme', true); */
   };
-  /*  
-  componentDidUpdate(prevProps, prevState, snapshot, timer) {
-    console.log('updated');
-    clearTimeout(this.timer); // clear the timeoutID
-  } */
 
   render() {
     return (
       <>
+        {/* local:{localStorage.getItem('nightMode')}-------state:
+        {this.state.nightMode} */}
         <Header
           filterData={this.handleSearch}
           handleNightMode={this.handleNightMode}
@@ -97,19 +111,19 @@ class App extends Component {
         />
         <div
           className="App"
-          style={this.state.nightMode ? themes.night : themes.light}
+          style={this.state.nightMode === 'light' ? themes.light : themes.night}
         >
           <Card
             data={this.state.filteredData}
             deleteCard={this.handleDelete}
             alert={this.handleAlert}
             handleEdit={this.handleEdit}
+            theme={this.state.nightMode}
           />
           {this.state.alert && (
             <div className="alert">{this.state.alertInfo}</div>
           )}
         </div>
-
         <Footer theme={this.state.nightMode} />
       </>
     );

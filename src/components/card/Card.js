@@ -5,10 +5,10 @@ import { AiFillDelete } from 'react-icons/ai';
 import CardModal from '../card-modal/CardModal';
 const themes = {
   light: {
-    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    backgroundColor: 'yellow',
   },
   night: {
-    backgroundColor: 'rgba(0, 0, 0, 0.95)',
+    backgroundColor: 'rblue',
   },
 };
 export default function Card(props) {
@@ -72,6 +72,7 @@ export default function Card(props) {
           modal={modalData}
           alert={props.alert}
           closeModal={closeModal}
+          theme={props.theme}
         />
       </div>
     )
