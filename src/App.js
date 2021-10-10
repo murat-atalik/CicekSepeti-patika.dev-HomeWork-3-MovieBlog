@@ -69,7 +69,7 @@ class App extends Component {
   };
   componentDidMount() {
     document.title = 'MoviesBd';
-    fetch('https://808d78e8-427b-4170-8a00-267b532e31c1.mock.pstmn.io/movies')
+    fetch('https://6150cd8cd0a7c1001701689e.mockapi.io/movies')
       .then((response) => response.json())
       .then((data) => {
         this.setState({ data, filteredData: data });
