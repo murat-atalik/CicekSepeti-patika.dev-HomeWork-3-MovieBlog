@@ -1,5 +1,12 @@
 [Live Demo](https://blog-app-hw3.vercel.app)
 
+## Çiceksepeti & patika.dev Bootcamp Homework 3
+- [Demo](https://blog-app-hw3.vercel.app)
+- Created with scss & react.js
+- react-modalö react-icons used
+- Responsive
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
