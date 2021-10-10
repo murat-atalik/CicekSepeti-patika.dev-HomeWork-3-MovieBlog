@@ -1,5 +1,3 @@
-[Live Demo](https://blog-app-hw3.vercel.app)
-
 ## Çiceksepeti & patika.dev Bootcamp Homework 3
 - [Demo](https://blog-app-hw3.vercel.app)
 - Created with scss & react.js
